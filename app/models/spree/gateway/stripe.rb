@@ -21,7 +21,7 @@ module Spree
         options[:customer] = customer
         creditcard = nil
       end
-      provider.purchase(money, creditcard, options)
+      provider.purchase(money.to_i, creditcard, options)
     end
 
     def authorize(money, creditcard, gateway_options)
